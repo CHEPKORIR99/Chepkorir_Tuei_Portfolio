@@ -123,3 +123,16 @@ ul {
 ul li {
     text-align: justify;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: blue; /* Keeping your original color */
+    padding: 10px 0;
+}
+
+/* Center the header text */
+.header {
+    text-align: center;
+    color: white; /* Adjust as needed */
+    padding: 20px 0;
+}
