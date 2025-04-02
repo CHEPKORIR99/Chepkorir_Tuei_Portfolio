@@ -19,9 +19,6 @@ CSS: For styling the website and making it responsive.
 
 JavaScript: For interacting with the backend (fetching project data dynamically from a server).
 
-Python: Used in my projects related to data processing, analysis, and automation.
-
-GIS Tools: Including QGIS, ArcGIS, GeoPandas, and Rasterio for geospatial data science tasks.
 
 Key Features
 Dynamic Project List: Projects are fetched from a backend server and displayed on the webpage. You can view detailed descriptions and links to project repositories.
