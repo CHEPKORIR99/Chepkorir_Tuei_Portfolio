@@ -23,20 +23,12 @@ db.connect((err) => {
 });
 
 // Handle form submission
-app.post('/submit-form', (req, res) => {
-    const { name, Id, email, message } = req.body;
-    const sql = 'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)';
-    
-    db.query(sql, [name,Id, email, message], (err, result) => {
-        if (err) {
-            console.error('Error saving data:', err);
-            res.status(500).send('Error saving data');
-        } else {
-            res.send('Form submitted successfully');
-        }
-    });
-});
-
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
+db.query(sql, [name, user_id, email, message], (err, result) => {
+    if (err) {
+        console.error('🛑 SQL Error:', err.sqlMessage); // Detailed error message
+        res.status(500).send('Error saving data: ' + err.sqlMessage);
+    } else {
+        console.log('✅ Form data saved:', result);
+        res.send('Form submitted successfully');
+    }
 });
