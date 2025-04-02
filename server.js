@@ -24,10 +24,10 @@ db.connect((err) => {
 
 // Handle form submission
 app.post('/submit-form', (req, res) => {
-    const { name, email, message } = req.body;
+    const { name, Id, email, message } = req.body;
     const sql = 'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)';
     
-    db.query(sql, [name, email, message], (err, result) => {
+    db.query(sql, [name,Id, email, message], (err, result) => {
         if (err) {
             console.error('Error saving data:', err);
             res.status(500).send('Error saving data');
